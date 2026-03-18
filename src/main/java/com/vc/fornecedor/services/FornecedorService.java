@@ -34,6 +34,7 @@ public class FornecedorService {
         FornecedorModel newFornecedorModel = fornecedorRepository.findById(id).get();
         newFornecedorModel.setContato(fornecedorModel.getContato());
         newFornecedorModel.setNomeFantasia(fornecedorModel.getNomeFantasia());
+        newFornecedorModel.setCnpj(fornecedorModel.getCnpj());
 
         return fornecedorRepository.save(newFornecedorModel);
     }
